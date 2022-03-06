@@ -40,10 +40,28 @@ h1:hover {
 }
 
 #board {
-  height: 90vh;
   border: 5px solid black;
 }
 
-.floor {
-  background-color: rgb(27, 203, 47);
+#gameBoard {
+  height: auto;
+}
+
+.but {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: yellow;
+}
+
+.but:hover {
+  cursor: pointer;
+}
+
+.guidance {
+  background-image: url("../images/letter.png");
+  background-size: cover;
+  height: 100vh;
 }

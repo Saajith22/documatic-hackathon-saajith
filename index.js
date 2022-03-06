@@ -13,14 +13,17 @@ const projectName = process.env.project;
 app.get("/", async (req, res) => {
   res.render(path.join(__dirname, "public", "views", "index.ejs"), {
     projectName,
-    redirect: (loc) => {
-      return res.redirect(loc);
-    },
   });
 });
 
 app.get("/game", async (req, res) => {
   res.render(path.join(__dirname, "public", "views", "game.ejs"), {
+    projectName,
+  });
+});
+
+app.get("/guide", async (req, res) => {
+  res.render(path.join(__dirname, "public", "views", "guide.ejs"), {
     projectName,
   });
 });
