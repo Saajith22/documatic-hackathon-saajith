@@ -41,7 +41,7 @@ const hero = {
     if (nightClock != 0) nightClock -= 1;
     else if (nightClock == 0 && !nightEnd && clocksEnded != 0) {
       nightEnd = true;
-      dayClock = 100;
+      dayClock = 40;
       clocksEnded += 1;
       hero.update();
     }
@@ -59,10 +59,24 @@ const hero = {
     if (hero.health <= 0) {
       intervals.forEach((interval) => clearInterval(interval));
 
+      ctx.fillStyle = "white";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.font = "100px bold";
       ctx.fillStyle = "red";
       return ctx.fillText(
         "You Died!",
+        canvas.width / 2 - 200,
+        canvas.height / 2
+      );
+    } else if (day >= 5) {
+      intervals.forEach((interval) => clearInterval(interval));
+
+      ctx.fillStyle = "white";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.font = "100px bold";
+      ctx.fillStyle = "green";
+      return ctx.fillText(
+        "You Win!",
         canvas.width / 2 - 200,
         canvas.height / 2
       );
