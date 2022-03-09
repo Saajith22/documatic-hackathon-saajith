@@ -7,5 +7,6 @@ You are lost, and you find shop, which you use for getting items, and you notice
 Zombies will attack you every night! Your goal is to survive 5 days!
 
 # Controls:
-WASD: UP/LEFT/DOWN/RIGHT
-Right-mouse-click: Attack
+``WASD: UP/LEFT/DOWN/RIGHT``
+
+``Right-mouse-click: Attack``
