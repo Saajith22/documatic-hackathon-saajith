@@ -14,8 +14,8 @@ let day = 1;
 let dayEnd = false;
 let nightEnd = false;
 let clocksEnded = 0;
-let dayClock = 100;
-let nightClock = 0;
+let dayClock = 0;
+let nightClock = 100;
 
 let intervals = [];
 let speedIndex = 0;
@@ -56,8 +56,7 @@ const hero = {
     }
   }, 1000),
   update: () => {
-    if (hero.health == 0) {
-      console.log(intervals);
+    if (hero.health <= 0) {
       intervals.forEach((interval) => clearInterval(interval));
 
       ctx.font = "100px bold";
@@ -68,6 +67,7 @@ const hero = {
         canvas.height / 2
       );
     }
+
     const floor = new Image();
     let floorName = hero.floor ? hero.floor : "floor1";
     floor.src = `images/${floorName}.png`;
@@ -149,6 +149,9 @@ const hero = {
 
     updateScreen();
   },
+  killZombie: (zombieIndex) => {
+    hero.zombieLocations.splice(zombieIndex, 1);
+  },
 };
 
 intervals.push(hero.time);
@@ -171,6 +174,22 @@ document.addEventListener("keydown", (key) => {
     case "KeyD":
       hero.move("right");
       break;
+  }
+});
+
+document.addEventListener("mousedown", (mouse) => {
+  if (hero.zombieLocations.length > 0) {
+    const findZombie = (loc) => {
+      if (loc.x >= hero.x - hero.speed) return true;
+      else if (loc.x <= hero.x + hero.speed) return true;
+      else if (loc.y <= hero.y + hero.speed) return true;
+      else if (loc.y >= hero.y - hero.speed) return true;
+    };
+
+    let zombieLocation = hero.zombieLocations.find(findZombie);
+    if (zombieLocation) {
+      hero.killZombie(hero.zombieLocations.indexOf(zombieLocation));
+    }
   }
 });
 
