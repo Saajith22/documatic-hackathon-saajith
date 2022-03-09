@@ -14,7 +14,6 @@ You are lost, and you find shop, which you use for getting items, and you notice
 6. Zombies will drain your HP quickly!!
 
 # Controls:
-
 ``WASD: UP/LEFT/DOWN/RIGHT``
 
 ``Right-mouse-click: Attack``
