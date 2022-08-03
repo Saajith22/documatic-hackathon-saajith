@@ -16,4 +16,5 @@ Run the project, and view on http://localhost:3000
 
 # Credits
 This game was made by Saajith
-(Discord) `Saajith#1001`
+
+__(Discord Tag: `Saajith#1001`)__
