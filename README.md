@@ -14,6 +14,6 @@ Run the project, and view on http://localhost:3000
 
 (Live Preview at: https://clicking-game-olive.vercel.app)
 
-#Credits
+# Credits
 This game was made by Saajith
-(Discord) Saajith#1001
+(Discord) `Saajith#1001`
