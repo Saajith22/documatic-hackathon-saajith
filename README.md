@@ -1,2 +1,4 @@
-# documatic-hackathon-saajith
-This is the repo for the third  document hackathon!
+# Saajith's Documatic Hackathons
+Use the branches to view each project/hackathon!!
+
+<3 happy coding....
